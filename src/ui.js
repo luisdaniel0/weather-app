@@ -1,5 +1,4 @@
 export const updateWeatherDisplay = (processedData) => {
-  const currentCity = document.querySelector('.currentCity');
   const currentCityName = document.querySelector('.currentCityName');
   const currentCityDate = document.querySelector('.currentCityDate');
   const headerCityTemp = document.querySelector('.headerCityTemp');
@@ -26,15 +25,17 @@ export const updateWeatherDisplay = (processedData) => {
 
   forecast.innerHTML = '';
   processedData.forecast.forEach((item) => {
-    console.log(item);
-
     const nextDay = document.createElement('div');
     nextDay.classList.add('forecastDay');
 
     const nextDayTemp = document.createElement('div');
+    nextDayTemp.classList.add('forecast-temp');
     const nextDayDate = document.createElement('div');
+    nextDayDate.classList.add('forecast-date');
     const nextDayConditions = document.createElement('div');
+    nextDayConditions.classList.add('forecast-conditions');
     const nextDayIcon = document.createElement('img');
+    nextDayIcon.classList.add('forecast-icon');
 
     nextDayTemp.textContent = item.temp;
     nextDay.appendChild(nextDayTemp);
