@@ -3,13 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <title>Document</title>
   </head>
   <body>
     <form id="form">
-      <label>Search for City</label>
-      <input type="text" id="searchBtn" name="searchBtn" />
-      <button class="btn">Click</button>
+      <label>Weather App </label>
+      <input
+        type="text"
+        id="searchBtn"
+        name="searchBtn"
+        placeholder="Enter city name.."
+      />
+      <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
       <button id="toggleUnit">°F / °C</button>
     </form>
     <div class="loading hidden">Loading weather data..</div>
@@ -25,7 +35,7 @@
           <div class="headerCityFeelsLike"></div>
           <div class="headerCityConditions"></div>
           <div class="currentWeatherIcon">
-            <img src="" alt="weather icon" class="weather-icon" />
+            <img src="" alt="weather icon" class="weather-icon hidden" />
           </div>
         </div>
       </div>

@@ -44,6 +44,7 @@ export const updateWeatherDisplay = (processedData) => {
   wind.textContent = processedData.current.wind;
   visibility.textContent = processedData.current.visibility;
   humidity.textContent = processedData.current.humidity;
+  currentWeatherIcon.classList.remove('hidden');
   currentWeatherIcon.src = require(
     `./assets/${processedData.current.icon}.svg`
   );
