@@ -54,3 +54,15 @@ input {
   border-radius: 15px;
   border: 1px solid white;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.loading {
+  color: aliceblue;
+}
