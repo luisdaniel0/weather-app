@@ -6,8 +6,6 @@ const convertTemp = (tempF, unit) => {
   }
 };
 
-console.log(convertTemp('89', 'celsius'));
-
 export const processedData = (rawData, unit = 'fahrenheit') => {
   return {
     location: rawData.resolvedAddress,

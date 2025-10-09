@@ -7,7 +7,6 @@ export const fetchWeatherData = async (location) => {
       throw new Error('City not found!');
     }
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error('Error in API call!', error.message);

@@ -1,3 +1,28 @@
+export const showLoading = () => {
+  // select the loading element
+  const loading = document.querySelector('.loading');
+  loading.classList.remove('hidden');
+  // remove the 'hidden' class
+};
+
+export const hideLoading = () => {
+  // select the loading element
+  // add the 'hidden' class
+  const loading = document.querySelector('.loading');
+  loading.classList.add('hidden');
+};
+
+export const showError = (message) => {
+  const error = document.querySelector('.error');
+  error.textContent = message;
+  error.classList.remove('hidden');
+};
+
+export const hideError = () => {
+  const error = document.querySelector('.error');
+  error.classList.add('hidden');
+};
+
 export const updateWeatherDisplay = (processedData) => {
   const currentCityName = document.querySelector('.currentCityName');
   const currentCityDate = document.querySelector('.currentCityDate');
