@@ -7,45 +7,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Document</title>
   </head>
   <body>
-    <form id="form">
-      <label>Weather App </label>
-      <input
-        type="text"
-        id="searchBtn"
-        name="searchBtn"
-        placeholder="Enter city name.."
-      />
-      <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-      <button id="toggleUnit">°F / °C</button>
-      <div class="loading hidden">Loading weather data..</div>
-      <div class="error hidden"></div>
-    </form>
-
-    <div class="container">
-      <div class="header">
-        <div class="currentCity">
-          <div class="currentCityName"></div>
-          <div class="currentCityDate"></div>
-        </div>
-        <div class="headerCityDetails">
-          <div class="headerCityTemp"></div>
-          <div class="headerCityFeelsLike"></div>
-          <div class="headerCityConditions"></div>
-          <div class="currentWeatherIcon">
-            <img src="" alt="weather icon" class="weather-icon hidden" />
+    <div class="app">
+      <div id="search-view">
+        <form id="form">
+          <h1 class="logo">Weather App</h1>
+          <div class="searchGrid">
+            <div class="search-container">
+              <input
+                type="text"
+                id="searchBtn"
+                name="searchBtn"
+                placeholder="Enter city name.."
+              />
+              <button class="btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <button id="toggleUnit" class="toggleUnit hidden">°F / °C</button>
           </div>
+          <div class="loading hidden">Loading weather data..</div>
+          <div class="error hidden"></div>
+        </form>
+      </div>
+      <div class="weather-view">
+        <div class="container">
+          <div class="header">
+            <div class="currentCity">
+              <div class="currentCityName"></div>
+              <div class="currentCityDate"></div>
+            </div>
+            <div class="headerCityDetails">
+              <div class="headerCityTemp"></div>
+              <div class="headerCityFeelsLike"></div>
+              <div class="headerCityConditions"></div>
+              <div class="currentWeatherIcon">
+                <img src="" alt="weather icon" class="weather-icon hidden" />
+              </div>
+            </div>
+          </div>
+          <div class="headerCityDetails">
+            <div class="currentWind"></div>
+            <div class="currentVisibility"></div>
+            <div class="currentHumidity"></div>
+          </div>
+          <div class="nextDaysDetails"></div>
         </div>
       </div>
-      <div class="headerCityDetails">
-        <div class="currentWind"></div>
-        <div class="currentVisibility"></div>
-        <div class="currentHumidity"></div>
-      </div>
-      <div class="nextDaysDetails"></div>
     </div>
   </body>
 </html>

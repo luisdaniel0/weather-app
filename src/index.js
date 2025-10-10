@@ -31,6 +31,7 @@ form.addEventListener('submit', async (e) => {
     const processed = processedData(rawData, currentUnit);
     hideError();
     updateWeatherDisplay(processed);
+    toggleButton.classList.remove('hidden');
   } else {
     showError('City not found! Please try again');
   }
@@ -47,8 +48,8 @@ toggleButton.addEventListener('click', async () => {
 
   if (rawData) {
     const processed = processedData(rawData, currentUnit);
-    hideError();
     updateWeatherDisplay(processed);
+    hideError();
   } else {
     showError('City not found! Please try again');
   }
